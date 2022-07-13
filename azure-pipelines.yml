@@ -22,7 +22,7 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'Microsoft-Azure-5(0cb12691-4f8e-4a66-abab-4481e2f0517e)'
+    azureSubscription: 'Microsoft-Azure-5(e9897c49-eaca-4f56-b924-1d77a1b6a395)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -35,8 +35,8 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Microsoft-Azure-5(0cb12691-4f8e-4a66-abab-4481e2f0517e)'
-    subscriptionId: '0cb12691-4f8e-4a66-abab-4481e2f0517e'
+    azureResourceManagerConnection: 'Microsoft-Azure-5(e9897c49-eaca-4f56-b924-1d77a1b6a395)'
+    subscriptionId: 'e9897c49-eaca-4f56-b924-1d77a1b6a395'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'rg-arm-devops'
     location: 'West Europe'
