@@ -6,20 +6,6 @@ pool:
 
 steps:
 
-- task: RunARMTTKTests@1
-  inputs:
-    templatelocation: '$(System.DefaultWorkingDirectory)\*'
-    resultLocation: '$(System.DefaultWorkingDirectory)\results'
-    allTemplatesMain: true
-    cliOutputResults: true
-    ignoreExitCode: true
-
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'NUnit'
-    testResultsFiles: '$(System.DefaultWorkingDirectory)\results\*-armttk.xml'
-  condition: always()
-
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'Microsoft-Azure-5(e9897c49-eaca-4f56-b924-1d77a1b6a395)'
